@@ -13,7 +13,7 @@ WHERE iva=20
 
 //esercizio 4
 SELECT * FROM prodotti
-WHERE EXTRACT(YEAR FROM data_attivazione)=2017 AND in_produzione=true OR in_commercio=true
+WHERE EXTRACT(YEAR FROM data_attivazione)=2017 AND (in_produzione=true OR in_commercio=true)
 
 //esercizio 5
 SELECT * FROM fatture
