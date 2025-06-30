@@ -1,6 +1,6 @@
 //esercizio 1
-select * from clienti
-where nome='Mario'
+SELECT * FROM clienti
+WHERE nome='Mario'
 
 //esercizio 2
 SELECT nome, cognome
