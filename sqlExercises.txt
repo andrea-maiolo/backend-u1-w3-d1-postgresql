@@ -25,11 +25,11 @@ SELECT numero_fattura, importo, iva , data_fattura, fornitori.denominazione FROM
 JOIN fornitori ON fatture.numero_fornitore = fornitori.numero_fornitore
 
 //esercizio 7
-SELECT data_fattura, COUNT(*) FROM fatture 
-WHERE iva=20 
+SELECT EXTRACT(YEAR FROM data_fattura), COUNT(*) FROM fatture 
+WHERE iva>=10 
 GROUP BY data_fattura
 
 //esercizio 8
-SELECT data_fattura, COUNT(*) , SUM(importo) FROM fatture 
+SELECT EXTRACT (YEAR FROM data_fattura), COUNT(*) , SUM(importo) FROM fatture 
 WHERE iva=20 
 GROUP BY data_fattura
